@@ -3,21 +3,15 @@ import { Input } from '@/components/ui/input'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { ChevronRight, Menu, Search } from 'lucide-react'
 import Image from 'next/image'
-
 import Link from 'next/link'
 import React from 'react'
-
-
-
-
 
 const Header = () => {
   return (
      <header className="
       border-b bg-background">
         
-        <div className="container flex h-16 items-center justify-between py-4 md:h-20">
-
+      <div className="container flex h-16 items-center justify-between py-4 md:h-20">
           <div className="flex items-center gap-4">
             <Sheet>
               <SheetTrigger asChild>

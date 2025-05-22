@@ -6,7 +6,7 @@ import React from 'react'
 
 const TopBar = () => {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex h-full flex-col">
       {/* Top Bar */}
       <div className="hidden border-b bg-muted/40 py-2 lg:block">
         <div className="container flex items-center justify-between">
