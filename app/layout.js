@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 // import TopBar from "./component/TopBar";
 import Header from "./component/Header";
+import Footer from "./component/Footer";
 import TopBar from "./component/TopBar";
 
 
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
           <Header />
         </div>
         <main className="flex-1 px-[10%]">{children}</main>
+        <Footer/>
       </body>
     </html>
   );
