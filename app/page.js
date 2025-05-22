@@ -10,7 +10,7 @@ const page = () => {
      
    <section className="relative">
           <HeroCarousal/>
-          <div className="absolute inset-0 bg-gradient-to-r from-background/80 to-background/20">
+          <div className="absolute inset-0 bg-gradient-to-r from-background/80 to-background/20 px-[10%]">
             <div className="container flex h-full flex-col items-start justify-center gap-4 py-12">
               <h1 className="max-w-2xl text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
                 Department of Information Technology & Electronics

@@ -43,7 +43,7 @@ const HeroCarousal=()=> {
   }, [current])
 
   return (
-    <div className="relative h-[400px] w-full overflow-hidden md:h-[500px] lg:h-[600px]">
+    <div className="relative h-[400px] w-full overflow-hidden md:h-[500px] lg:h-[600px] ">
       {slides.map((slide, index) => (
         <div
           key={slide.id}
@@ -51,16 +51,16 @@ const HeroCarousal=()=> {
             index === current ? "opacity-100" : "opacity-0"
           }`}
         >
-          <img src={slide.image || "/placeholder.svg"} alt={slide.alt} fill priority className="object-cover" />
+          <img src={slide.image || "/placeholder.svg"} alt={slide.alt} className="object-cover w-[100%] h-[90%]" />
         </div>
       ))}
-      <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 transform gap-2">
+      <div className="absolute bottom-20 left-1/2 flex -translate-x-1/2 transform gap-2">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrent(index)}
             className={`h-2 w-8 rounded-full transition-colors ${
-              index === current ? "bg-primary" : "bg-background/50"
+              index === current ? "bg-primary" : "bg-secondary"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
@@ -69,7 +69,7 @@ const HeroCarousal=()=> {
       <Button
         variant="ghost"
         size="icon"
-        className="absolute left-4 top-1/2 -translate-y-1/2 transform rounded-full bg-background/20 text-white backdrop-blur-sm hover:bg-background/40"
+        className="absolute left-4 top-1/2 -translate-y-1/2 transform rounded-full bg-primary text-white backdrop-blur-sm hover:bg-secondary"
         onClick={previousSlide}
       >
         <ChevronLeft className="h-6 w-6" />
@@ -78,7 +78,7 @@ const HeroCarousal=()=> {
       <Button
         variant="ghost"
         size="icon"
-        className="absolute right-4 top-1/2 -translate-y-1/2 transform rounded-full bg-background/20 text-white backdrop-blur-sm hover:bg-background/40"
+        className="absolute right-4 top-1/2 -translate-y-1/2 transform rounded-full bg-primary text-white backdrop-blur-sm hover:bg-secondary"
         onClick={nextSlide}
       >
         <ChevronRight className="h-6 w-6" />
